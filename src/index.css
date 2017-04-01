@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.inlineList li{
+  display: inline;
+  border:1px solid red;
+  margin:40px;
+  max-width: 200px;
+}
