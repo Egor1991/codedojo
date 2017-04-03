@@ -1,24 +1,27 @@
 import React, { Component } from 'react';
-
+import About from './About/About'
 
 class Item extends Component {
+
+
+ handleAbout(event){
+  
+   console.log(1);
+  }
   render() {
-    let arrData = this.props.data;
-    let TempalteData = arrData.map(function(item,index){
-    
-      return (
-          <ul key={index} className ="inlineList">
-            <li >{item.id}</li>
-            <li >{item.name}</li>
-            <li >{item.email}</li>
-            <li >{item.body}</li>
-          </ul>
-       );
-    });
+    let DataID = this.props.iditem;
+    let DataName = this.props.nameitem;
+    let col = 10;
     return (
-      <div> {TempalteData}</div>
+      <tr>
+        <td>{DataID}</td>
+        <td>{DataName}</td>
+        <td align="left">{col}</td>
+        <td><About bodyitem={this.props.bodyitem} imgitem ={this.props.imgitem}/></td>
+        <td><a href="#" onClick = {this.handleAbout}>Купить</a></td>
+      </tr> 
     );
-        
+    
    
   }
 }

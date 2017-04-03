@@ -4,9 +4,7 @@ body {
   font-family: sans-serif;
 }
 
+
 .inlineList li{
   display: inline;
-  border:1px solid red;
-  margin:40px;
-  max-width: 200px;
 }
